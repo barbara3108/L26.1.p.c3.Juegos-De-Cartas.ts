@@ -24,7 +24,7 @@ export default class Cl_vJuegoPlain implements I_vJuego{
 
     }
 
-    OnNewParticipante(callback: () => void): void {
+    onNewParticipante(callback: () => void): void {
         this.btNewParticipante.onclick = callback;      }
 
     mostrarParticipante({ 
@@ -45,17 +45,17 @@ export default class Cl_vJuegoPlain implements I_vJuego{
             const tr = document.createElement("tr");
 
                 tr.innerHTML = html`
-                    <td>${participante.nombre}</td>
-                    <td> $. ${participante.carta1}</td>
-                    <td> Bs. ${participante.carta2}</td>
-                    <td> $. ${participante.carta3}</td>
-                    <td> Bs. ${participante.puntuacion()}</td>
+                    <td> ${participante.nombre} </td>
+                    <td> ${participante.carta1}</td>
+                    <td> ${participante.carta2} </td>
+                    <td> ${participante.carta3} </td>
+                    <td> ${participante.puntuacion()} </td>
                 `;
 
             this.tbParticipante.appendChild(tr);
         });
         this.lblNombreMayor.innerHTML = nombreMayor;
-        this.lblPorcentMenos10.innerHTML = porcentMenos10.toString();
+        this.lblPorcentMenos10.innerHTML = porcentMenos10.toFixed(2);
         }
     
 }

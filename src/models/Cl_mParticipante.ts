@@ -7,7 +7,7 @@ export default class Cl_mParticipante{
 
     constructor({nombre, carta1,carta2,carta3}:
         {nombre:string, carta1:number,carta2:number,carta3:number}=
-        {nombre: "", carta1: 0,carta2:0,carta3:0}){
+        {nombre: "", carta1: 0,carta2: 0,carta3: 0}){
              
             this.nombre = nombre;
             this.carta1 = carta1;
@@ -24,8 +24,8 @@ export default class Cl_mParticipante{
         return this._nombre;
     }
 
-    set carta1 (c1:number){
-        this._carta1 = +c1;
+    set carta1 (c:number){
+        this._carta1 = +c;
     }
 
     get carta1(): number{
@@ -33,8 +33,8 @@ export default class Cl_mParticipante{
     }
 
     
-    set carta2 (c2:number){
-        this._carta2 = +c2;
+    set carta2 (c:number){
+        this._carta2 = +c;
     }
 
     get carta2(): number{
@@ -42,8 +42,8 @@ export default class Cl_mParticipante{
     }
 
     
-    set carta3 (c3:number){
-        this._carta1 = +c3;
+    set carta3 (c:number){
+        this._carta3 = +c;
     }
 
     get carta3(): number{

@@ -17,8 +17,8 @@ export default class Cl_mJuego {
             }
     }
 
-    nombreMayor() {
-        if (this.totalParticipantes === 0) return 0;
+    nombreMayor(): string {
+        if (this.totalParticipantes === 0) return "No Hay Participantes";
 
         let max = this.participante[0].puntuacion();
         let name = this.participante[0].nombre;
@@ -34,7 +34,7 @@ export default class Cl_mJuego {
             return name;
     }
 
-    porcentMenos10() {
+    porcentMenos10(): number {
         if (this.totalParticipantes === 0) return 0;
 
         return (this.cntMenos10 / this.totalParticipantes) * 100;
