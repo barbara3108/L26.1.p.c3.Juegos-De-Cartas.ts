@@ -3,9 +3,9 @@
 import Cl_mParticipante from "./Cl_mParticipante.js";
 
 export default class Cl_mJuego {
-    public participante: Cl_mParticipante = [];
+    public participante: Cl_mParticipante[] = [];
     private totalParticipantes: number = 0;
-    private cntMenos10: number;
+    private cntMenos10: number = 0;
 
     agregarParticipante(participante: Cl_mParticipante) {
         this.participante.push(participante);
@@ -17,7 +17,7 @@ export default class Cl_mJuego {
             }
     }
 
-    puntuacionMaxima() {
+    nombreMayor() {
         if (this.totalParticipantes === 0) return 0;
 
         let max = this.participante[0].puntuacion();
